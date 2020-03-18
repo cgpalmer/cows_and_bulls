@@ -1,0 +1,61 @@
+body {
+    background-color: lightskyblue;
+    font-family: 'Special Elite', cursive;
+}
+
+/* Grid areas */
+.header {grid-area: header;}
+.screen {grid-area: screen;}
+.one {grid-area: one;}
+.two {grid-area: two;}
+.three {grid-area: three;}
+.four {grid-area: four;}
+.five {grid-area: five;}
+.six {grid-area: six;}
+.seven {grid-area: seven;}
+.eight {grid-area: eight;}
+.nine {grid-area: nine;}
+.zeronumer {grid-area: zeronumber;}
+.blank {grid-area: blank;}
+.enter {grid-area: enter;}
+
+/* Grid */
+.grid-container {
+display: grid;
+  grid-template-areas:
+    'header header header'
+    'screen screen screen'
+    'one two three'
+    'four five six'
+    'seven eight nine'
+    'blank zeronumber enter'
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vh;
+    text-align: center;
+    padding: 2vh;
+    margin: 10vh 2vh 2vh 2vh;
+    background-color: rgb(168, 168, 168);
+}
+
+.grid-container>div {
+    background-color: darkblue;
+    color: white;
+    padding: 2vh;
+    height: 10vh;
+}
+
+.grid-container .screen p {
+    letter-spacing: 10px;
+}
+
+.grid-container>div p {
+    margin: 10px 0 0 0;
+}
+
+/* Individual classes */
+.header {
+    padding-top {
+
+    }
+}
