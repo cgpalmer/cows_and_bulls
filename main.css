@@ -1,11 +1,11 @@
-body {
+body { 
     background-color: lightskyblue;
     font-family: 'Special Elite', cursive;
-}
+} 
 
 /* Grid areas */
 .header {grid-area: header;}
-.screen {grid-area: screen;}
+.screen {grid-area: calculator-screen;}
 .one {grid-area: one;}
 .two {grid-area: two;}
 .three {grid-area: three;}
@@ -15,16 +15,16 @@ body {
 .seven {grid-area: seven;}
 .eight {grid-area: eight;}
 .nine {grid-area: nine;}
-.zeronumer {grid-area: zeronumber;}
+.zeronumber {grid-area: zeronumber;}
 .blank {grid-area: blank;}
 .enter {grid-area: enter;}
 
 /* Grid */
 .grid-container {
-display: grid;
-  grid-template-areas:
+    display: grid;
+    grid-template-areas:
     'header header header'
-    'screen screen screen'
+    'calculator-screen calculator-screen calculator-screen'
     'one two three'
     'four five six'
     'seven eight nine'
@@ -34,28 +34,40 @@ display: grid;
     grid-gap: 2vh;
     text-align: center;
     padding: 2vh;
-    margin: 10vh 2vh 2vh 2vh;
+    margin: 1vh 1vh 2vh 1vh;
     background-color: rgb(168, 168, 168);
 }
 
-.grid-container>div {
+.grid-container>button {
     background-color: darkblue;
     color: white;
     padding: 2vh;
     height: 10vh;
 }
 
-.grid-container .screen p {
-    letter-spacing: 10px;
+.grid-container .header{
+    background-color: darkblue;
+    color: white;
+    padding: 2vh;
+    height: 10vh;
 }
 
-.grid-container>div p {
-    margin: 10px 0 0 0;
-}
+
+
+
 
 /* Individual classes */
-.header {
-    padding-top {
+table {
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+table, th, tr {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
 
-    }
+.calculator-screen {
+    text-align: center;
 }

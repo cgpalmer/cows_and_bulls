@@ -10,22 +10,34 @@
     <title>Cows and Bulls</title>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="header"><p>Cows and Bulls</p></div>
-        <div class="screen"><p>_ _ _ _</p></div>
-        <div class="one number"><p>1</p></div>
-        <div class="two number"><p>2</p></div>
-        <div class="three number"><p>3</p></div>
-        <div class="four number"><p>4</p></div>
-        <div class="five number"><p>5</p></div>
-        <div class="six number"><p>6</p></div>
-        <div class="seven number"><p>7</p></div>
-        <div class="eight number"><p>8</p></div>
-        <div class="nine number"><p>9</p></div>
-        <div class="zeronumer number"><p>0</p></div>
-        <div class="blank number"></div>
-        <div class="enter number"><p>Enter</p></div>
+    <div class="grid-container calculator-keys">
+        <div class="header">Cows and Bulls</div>
+        <input type="text" class="calculator-screen screen" value="0" disabled />        
+        <button type="button" class="seven" value="7">7</button>
+        <button type="button" class="eight" value="8">8</button>
+        <button type="button" class="nine" value="9">9</button>
+        <button type="button" class="four" value="4">4</button>
+        <button type="button" class="five" value="5">5</button>
+        <button type="button" class="six" value="6">6</button>
+        <button type="button" class="one" value="1">1</button>
+        <button type="button" class="two" value="2">2</button>            
+        <button type="button" class="three" value="3">3</button>
+        <button type="button" class="zeronumber" value="0">0</button>       
+        <button type="button" class="enter">Enter</button>   
+        <button type="button" class="blank"></button>                
     </div>
+
+    <div class="grid-container-results">
+        <table>
+            <tr>
+                <th>Previous Guess</th>
+                <th>Cows</th>
+                <th>Bulls</th>
+            </tr>       
+        </table>    
+    </div>
+
+    <a href="test-page.html">Link</a>
 
 
 

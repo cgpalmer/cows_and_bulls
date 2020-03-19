@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access a Number field</h3>
+
+<input type="number" id="screen" value="0">
+
+<p>Click the button to get the number of the number field.</p>
+
+<button onclick="guessNumber()">Have a guess!</button>
+
+ <div class="grid-container-results">
+        <table>
+            <tr>
+                <th>Previous Guess</th>
+                <th>Cows</th>
+                <th>Bulls</th>
+            </tr>
+            <tr>
+                <td><p id="prev-guess"></p></td>
+                <td></td>
+                <td></td>
+            </tr>    
+        </table>    
+    </div>
+
+
+<script>
+function guessNumber() {
+  var guess = document.getElementById("screen").value;
+  if (guess == 1202) {
+  alert("Winner, winner! Chicken Dinner!")
+}
+   
+  document.getElementById("prev-guess").innerHTML = guess;
+}
+</script>
+
+</body>
+</html>
