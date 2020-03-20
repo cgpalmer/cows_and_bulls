@@ -6,3 +6,10 @@ body {
 body div {
     margin: 20px;
 }
+
+.list-of-numbers ul li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: grey;
+}
