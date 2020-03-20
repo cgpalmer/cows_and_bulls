@@ -60,11 +60,14 @@ function guessNumber() {
 }
 }
 
-
-
-$(".reset-button").click(function(){
-    $(".list-number").css("background-color", "grey");
+$(".hide-help").click(function(){
+      $(".help").slideUp("slow");
 });
+
+$(".showHelp").click(function(){
+      $(".help").slideDown("slow");
+});
+
 
 $(".list-number").click(function(){
     $(this).css("background-color", "black");

@@ -1,33 +1,160 @@
 $main-bg-color: darkblue;
 $screen-color: lightgrey;
+$display: inline-block;
+$padding: 20px;
+$btn-padding: 50px;
+$margin: 20px;
+$main-font: 'Special Elite', sans-serif;
 
-body {
+
+
+.body {
     background-color: $screen-color;
+    font-family: $main-font;
     margin: 0;
     padding: 0;
 }
 
 .grid-container {
     background-color: $main-bg-color;
+    text-align: center;
+    margin: $margin;
 }
 
+.grid-container-results {
+    padding: $padding;
+}
+
+.help {
+    padding: $padding;
+    color: white;
+    border-bottom: 2px solid white;
+    font-family: $main-font;
+   
+    & h3 {
+        text-decoration: underline;
+        font-size: 2.5rem;
+    }
+    & p {
+        margin-bottom: 30px;
+        text-align: left;
+        font-size: 2rem;
+    }
+    & .hide-help {
+        text-align: center;
+        margin: 40px 0 20px 0;
+        text-decoration: underline;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+.showHelp {
+    display: inline;
+    margin-left: 110px;
+    color: white;
+}
+
+.eliminate {
+    background-color: black;
+    color: white;
+}
+
+.list-of-numbers {
+    padding: $padding;
+}
 .list-of-numbers ul li {
-    display: inline-block;
+    display: $display;
     background-color: $screen-color;
-    padding: 30px;
+    padding: 25px;
     margin: 10px;
 }
 
-.modal {
-    display: none;
+ul {
+    padding: 0;
+}
+
+
+
+#enter {
+    display: $display;
+    margin-left:auto;
+    margin-right: auto;
+    font-family: $main-font;
+    &:hover {
+        cursor: pointer;
+        background-color: darkgray;
+    }
+}
+
+.enter {
+    margin: $margin;
+    padding: $padding;
+}
+
+#enter, 
+#playAgain, 
+th, 
+li {
+    font-size: 2rem;
+}
+
+
+
+.screen {
+    padding: 40px 20px 20px 20px;
+    margin: 20px 20px 20px 165px;
+    display: inline-block;
+}
+
+.screen input {
+    padding: $padding;
+    font-size: 2rem;
+    font-family: $main-font;
 }
 
 button {
     background-color: $screen-color;
+    margin-left: auto;
+    margin-right: auto;
+    padding: $btn-padding;    
+}
+
+#playAgain {
+    @extend button;
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: $main-font;
+    &:hover {
+        background-color: darkgray;
+        cursor: pointer;
+    }
 }
 
 table {
     background-color: $screen-color;
-    margin: 20px auto;
+    margin: $margin auto;
+    width: 60%;
+    text-align: left;
+    
+
+    & td {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    & th {
+        padding: 10px;
+    }
 
 }
+
+
+
+.reset-button {
+    padding: 20px 20px 40px 20px;
+    margin-bottom: $margin;
+}
+

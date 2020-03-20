@@ -3,18 +3,26 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
-<div class="modal">
-<p>Push play and the computer will pick a number for you to guess. <br> 
-Before each go, you need to press 'Try again' to reset the 'cows' and 'bulls'.<br>
-There are 2 digits, it does not start with 0 and there are no duplicates.</p>
-</div>
+<body class="body">
 
 <div class="grid-container">
+    <div id="#help" class="help">
+        <h3>Rules</h3>
+        <p>The aim of the game is to guess the two digit number.</p>
+        <p>If you get a digit right but in the wrong place, it will register as a cow.</p>
+        <p>If you get a digit and it is in the right place, it will register as a bull.</p>
+        <p>Use an the onscreen buttons to eliminate numbers.</p>
+        <p class="hide-help">Hide</p>
+        
+    </div>
     <div class="screen">
         <input type="number" id="screen" value="0">
-        <button onclick="guessNumber()">Have a guess!</button>
+        <p class="showHelp"><i class="fas fa-info-circle fa-3x"></i></p>
+    </div>
+    <div class="enter">
+        <button id="enter" onclick="guessNumber()">Have a guess!</button>
     </div>
 
     <div class="list-of-numbers">
@@ -23,7 +31,7 @@ There are 2 digits, it does not start with 0 and there are no duplicates.</p>
             <li id="#one" class="list-number">1</li>
             <li id="#second" class="list-number">2</li>
             <li id="#three" class="list-number">3</li>
-            <li id="#four" class="list-number">4</li>
+            <li id="#four" class="list-number">4</li> <br>
             <li id="#five" class="list-number">5</li>
             <li id="#six" class="list-number">6</li>
             <li id="#seven" class="list-number">7</li>
@@ -52,7 +60,7 @@ There are 2 digits, it does not start with 0 and there are no duplicates.</p>
         </div>
 
     <div class="reset-button">
-            <button><a href="index.html">Play Again!</a></button>
+        <a href="index.html"><button id="playAgain">Play Again!</button></a>
     </div>
 </div>
 
@@ -60,6 +68,7 @@ There are 2 digits, it does not start with 0 and there are no duplicates.</p>
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3129319209.js" crossorigin="anonymous"></script>
 
 <script src="main.js"></script>
 
