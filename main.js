@@ -1,46 +1,71 @@
-const calculator = {
-  displayValue: '0',
-  firstOperand: null,
-  waitingForSecondOperand: false,
-  operator: null,
-};
-
-function updateDisplay() {
-  const display = document.querySelector('.calculator-screen');
-  display.value = calculator.displayValue;
+window.onload = function myFunction() {
+  
+  var x = Math.floor((Math.random() * 10));
+  var noZero;
+  if (x == 0) {
+     noZero = x + 1;     
+  } else {
+      noZero = x;
+  }
+  
+  var fix = 1;
+  var y = Math.floor((Math.random() * 10));
+  var noDuplicate;
+  if (y == x) {
+      noDuplicate = (y - fix);
+  } else {
+      noDuplicate = y;
+  }
+    computerNumber = noZero.toString() + noDuplicate.toString();
+    console.log(computerNumber); 
 }
 
-updateDisplay();
 
+function guessNumber() {
+  var guess = document.getElementById("screen").value;
+  var firstDigit = guess.charAt(0);
+  var secondDigit = guess.charAt(1);
+  var correctFirstDigit = computerNumber.charAt(0);
+  var correctSecondDigit = computerNumber.charAt(1);
+  console.log(firstDigit, secondDigit, correctFirstDigit, correctSecondDigit)
+    if (guess == computerNumber) {
+  alert("Winner, winner! Chicken Dinner!")
+} else {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(1);
+  previousGuess = row.insertCell(0);
+  cows = row.insertCell(1);
+  bulls = row.insertCell(2);
 
-const keys = document.querySelector('.calculator-keys');
-keys.addEventListener('click', (event) => {
-  const { target } = event;
-  if (!target.matches('button')) {
-    return;
+  previousGuess.innerHTML = guess;
+    if (firstDigit == correctFirstDigit) {
+         bulls.innerHTML = 1;
+    } 
+
+    if (secondDigit == correctSecondDigit){
+        bulls.innerHTML = 1;
+    }
+
+      if (firstDigit == correctSecondDigit) {
+            cows.innerHTML = 1;
+    }
+    
+    if (secondDigit == correctFirstDigit) {
+        cows.innerHTML = 1;
+    }
+
+  if (firstDigit == correctSecondDigit && secondDigit == correctFirstDigit){
+        cows.innerHTML = 2;
   }
+}
+}
 
- inputDigit(target.value);
-updateDisplay();
+
+
+$(".reset-button").click(function(){
+    $(".list-number").css("background-color", "grey");
 });
 
-function inputDigit(digit) {
-  const { displayValue } = calculator;
-  // Overwrite `displayValue` if the current value is '0' otherwise append to it
-  calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
-}
-
-function handleOperator(nextOperator) {
-  const { firstOperand, displayValue, operator } = calculator
-  const inputValue = parseFloat(displayValue);
-
-  if (firstOperand === null) {
-    calculator.firstOperand = inputValue;
-  }
-
-  calculator.waitingForSecondOperand = true;
-  calculator.operator = nextOperator;
-}
-
-handleOperator(target.value);
-updateDisplay();
+$(".list-number").click(function(){
+    $(this).css("background-color", "black");
+});
