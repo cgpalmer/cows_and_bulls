@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheey" src="main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
 <p>Push play and the computer will pick a number for you to guess. <br> 
 Before each go, you need to press 'Try again' to reset the 'cows' and 'bulls'.<br>
 There are 2 digits, it does not start with 0 and there are no duplicates.</p>
-<button onclick="myFunction()">Play</button>
+
 
 
 <div class="screen">
     <input type="number" id="screen" value="0">
+    <button onclick="guessNumber()">Have a guess!</button>
 </div>
 
 <div class="guessing-button">
-    <button onclick="guessNumber()">Have a guess!</button>
-    <button onclick="resetFunction()">Try Again!</button>
+    <button onclick="resetFunction()">Try Again!</button><br>
 </div>
+
+<div class="list-of-numbers">
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+</div>
+
  <div class="grid-container-results">
         <table>
             <tr>
@@ -33,16 +50,36 @@ There are 2 digits, it does not start with 0 and there are no duplicates.</p>
         </table>    
     </div>
 
-<p id="demo"></p>
-
-
-<p id="demo2"></p>
-<p id="demo3"></p>
-
-<a href="testpage2.html">link2</a>
+<div class="reset-button">
+        <button onclick="myFunction()">Play Again!</button>
+</div>
 
 
 <script>
+
+window.onload = function myFunction() {
+  
+  var x = Math.floor((Math.random() * 10));
+  var noZero;
+  if (x == 0) {
+     noZero = x + 1;     
+  } else {
+      noZero = x;
+  }
+  
+
+
+  var fix = 1;
+  var y = Math.floor((Math.random() * 10));
+  var noDuplicate;
+  if (y == x) {
+      noDuplicate = (y - fix);
+  } else {
+      noDuplicate = y;
+  }
+    computerNumber = noZero.toString() + noDuplicate.toString();
+    console.log(computerNumber); 
+}
 
 function myFunction() {
   
@@ -67,7 +104,6 @@ function myFunction() {
     computerNumber = noZero.toString() + noDuplicate.toString();
     console.log(computerNumber); 
 }
-
 
 
 function guessNumber() {
