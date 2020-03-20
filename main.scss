@@ -1,0 +1,33 @@
+$main-bg-color: darkblue;
+$screen-color: lightgrey;
+
+body {
+    background-color: $screen-color;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    background-color: $main-bg-color;
+}
+
+.list-of-numbers ul li {
+    display: inline-block;
+    background-color: $screen-color;
+    padding: 30px;
+    margin: 10px;
+}
+
+.modal {
+    display: none;
+}
+
+button {
+    background-color: $screen-color;
+}
+
+table {
+    background-color: $screen-color;
+    margin: 20px auto;
+
+}

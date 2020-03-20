@@ -2,56 +2,58 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 <body>
+<div class="modal">
 <p>Push play and the computer will pick a number for you to guess. <br> 
 Before each go, you need to press 'Try again' to reset the 'cows' and 'bulls'.<br>
 There are 2 digits, it does not start with 0 and there are no duplicates.</p>
-
-
-
-<div class="screen">
-    <input type="number" id="screen" value="0">
-    <button onclick="guessNumber()">Have a guess!</button>
 </div>
 
-<div class="list-of-numbers">
-    <ul>
-        <li id="#zeronumber" class="list-number">0</li>
-        <li id="#one" class="list-number">1</li>
-        <li id="#second" class="list-number">2</li>
-        <li id="#three" class="list-number">3</li>
-        <li id="#four" class="list-number">4</li>
-        <li id="#five" class="list-number">5</li>
-        <li id="#six" class="list-number">6</li>
-        <li id="#seven" class="list-number">7</li>
-        <li id="#eight" class="list-number">8</li>
-        <li id="#nine" class="list-number">9</li>
-    </ul>
-</div>
-
- <div class="grid-container-results">
-        <table id="myTable">
-        <tr>
-            <th>Previous guess</th>
-            <th>Cows</th>
-            <th>Bulls</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        </table>
-        <br>    
+<div class="grid-container">
+    <div class="screen">
+        <input type="number" id="screen" value="0">
+        <button onclick="guessNumber()">Have a guess!</button>
     </div>
 
-<div class="reset-button">
-        <button><a href="index.html">Play Again!</a></button>
+    <div class="list-of-numbers">
+        <ul>
+            <li id="#zeronumber" class="list-number">0</li>
+            <li id="#one" class="list-number">1</li>
+            <li id="#second" class="list-number">2</li>
+            <li id="#three" class="list-number">3</li>
+            <li id="#four" class="list-number">4</li>
+            <li id="#five" class="list-number">5</li>
+            <li id="#six" class="list-number">6</li>
+            <li id="#seven" class="list-number">7</li>
+            <li id="#eight" class="list-number">8</li>
+            <li id="#nine" class="list-number">9</li>
+        </ul>
+    </div>
+
+    <div class="grid-container-results">
+            <table id="myTable">
+            <tr>
+                <th>Previous guess</th>
+                <th>Cows</th>
+                <th>Bulls</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            </table>
+            <br>    
+        </div>
+
+    <div class="reset-button">
+            <button><a href="index.html">Play Again!</a></button>
+    </div>
 </div>
 
 <script

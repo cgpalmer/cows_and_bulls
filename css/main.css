@@ -1,0 +1,30 @@
+body {
+  background-color: lightgrey;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  background-color: darkblue;
+}
+
+.list-of-numbers ul li {
+  display: inline-block;
+  background-color: lightgrey;
+  padding: 30px;
+  margin: 10px;
+}
+
+.modal {
+  display: none;
+}
+
+button {
+  background-color: lightgrey;
+}
+
+table {
+  background-color: lightgrey;
+  margin: 20px auto;
+}
+/*# sourceMappingURL=main.css.map */
