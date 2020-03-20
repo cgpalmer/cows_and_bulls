@@ -47,6 +47,9 @@
   display: inline;
   margin-left: 110px;
   color: white;
+}
+
+.showHelp:hover {
   cursor: pointer;
 }
 
