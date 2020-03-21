@@ -26,10 +26,12 @@ $main-font: 'Special Elite', sans-serif;
 }
 
 .help {
+    display: none;
     padding: $padding;
     color: white;
     border-bottom: 2px solid white;
     font-family: $main-font;
+    
    
     & h3 {
         text-decoration: underline;

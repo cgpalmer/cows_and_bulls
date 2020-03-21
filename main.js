@@ -1,23 +1,27 @@
-window.onload = function myFunction() {
+window.onload = function pickANumber(){
+  // All numbers are equal
+  var x = 3; 
+  var y = 3; 
+  var z = 3; 
+min = Math.ceil(1);
+max = Math.floor(10);
+
   
-  var x = Math.floor((Math.random() * 10));
-  var noZero;
-  if (x == 0) {
-     noZero = x + 1;     
-  } else {
-      noZero = x;
-  }
+  // run this loop until numberOne is different than numberThree
+  do {
+      x = Math.floor(Math.random() * (max - min)) + min;
+  } while(x == z);
   
-  var fix = 1;
-  var y = Math.floor((Math.random() * 10));
-  var noDuplicate;
-  if (y == x) {
-      noDuplicate = (y - fix);
-  } else {
-      noDuplicate = y;
-  }
-    computerNumber = noZero.toString() + noDuplicate.toString();
-    console.log(computerNumber); 
+  // run this loop until numberTwo is different than numberThree and numberOne
+  do {
+    y = Math.floor(Math.random() * (max - min)) + min;
+} while(y == z || y == x);
+
+console.log(x);
+console.log(y); 
+computerNumber = x.toString() + y.toString();
+console.log(computerNumber);
+
 }
 
 
