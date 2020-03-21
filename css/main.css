@@ -53,20 +53,22 @@
   cursor: pointer;
 }
 
-.eliminate {
-  background-color: black;
-  color: white;
-}
-
 .list-of-numbers {
   padding: 20px;
 }
 
-.list-of-numbers ul li {
+.list-number {
   display: inline-block;
-  background-color: lightgrey;
   padding: 25px;
   margin: 10px;
+  background-color: lightgrey;
+}
+
+.eliminate {
+  display: inline-block;
+  padding: 25px;
+  margin: 10px;
+  background-color: black;
 }
 
 ul {

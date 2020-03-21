@@ -60,19 +60,25 @@ $main-font: 'Special Elite', sans-serif;
     }
 }
 
-.eliminate {
-    background-color: black;
-    color: white;
-}
+
 
 .list-of-numbers {
     padding: $padding;
 }
-.list-of-numbers ul li {
+.list-number {
     display: $display;
-    background-color: $screen-color;
     padding: 25px;
     margin: 10px;
+    background-color: $screen-color;
+    
+}
+
+.eliminate {
+    display: $display;
+    padding: 25px;
+    margin: 10px;
+    background-color: black;
+    
 }
 
 ul {

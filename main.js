@@ -69,6 +69,6 @@ $(".showHelp").click(function(){
 });
 
 
-$(".list-number").click(function(){
-    $(this).css("background-color", "black");
+$("div ul li").click(function(){
+  $(this).toggleClass("eliminate");
 });
