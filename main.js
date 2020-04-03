@@ -1,10 +1,11 @@
 window.onload = function pickANumber(){
   // All numbers are equal
-  var x = 3; 
-  var y = 3; 
-  var z = 3; 
+  var x = y; 
+  var y = z; 
+  var z = Math.floor(Math.random() * 10); 
 min = Math.ceil(1);
 max = Math.floor(10);
+
 
   
   // run this loop until numberOne is different than numberThree
@@ -14,7 +15,7 @@ max = Math.floor(10);
   
   // run this loop until numberTwo is different than numberThree and numberOne
   do {
-    y = Math.floor(Math.random() * (max - min)) + min;
+    y = Math.floor(Math.random() * 10);
 } while(y == z || y == x);
 
 console.log(x);
@@ -76,3 +77,4 @@ $(".showHelp").click(function(){
 $("div ul li").click(function(){
   $(this).toggleClass("eliminate");
 });
+

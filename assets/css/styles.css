@@ -16,7 +16,7 @@
 }
 
 .help {
-  display: block;
+  display: none;
   padding: 20px;
   color: white;
   border-bottom: 2px solid white;
@@ -150,9 +150,5 @@ table th {
 .reset-button {
   padding: 20px 20px 40px 20px;
   margin-bottom: 20px;
-}
-
-strong {
-  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */
